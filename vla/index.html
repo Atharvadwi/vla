@@ -1092,10 +1092,65 @@
   border-right: 2px solid var(--gold);
   z-index: 3;
 }
+
+.floating-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 999;
+}
+
+.contact-btn {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Phone Button Style */
+.call-btn {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* WhatsApp Button Style */
+.whatsapp-btn {
+  background: #25D366;
+}
+  
 </style>
 </head>
 <body>
 
+<div class="floating-contact">
+  
+  <!-- Phone Button -->
+  <a href="tel:+919399585309" class="contact-btn call-btn">
+    📞
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919399585309" target="_blank" class="contact-btn whatsapp-btn">
+    💬
+  </a>
+
+</div>
+
+  
 <!-- Custom Cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
